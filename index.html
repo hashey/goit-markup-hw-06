@@ -488,23 +488,27 @@
           <section class="footer-social">
             <b class="title">Подпишитесь на рассылку</b>
             <div class="fast-mail">
-            <form class="footer-form" autocomplete="off">
-            <label class="footer-field">
-              <input type="email" class="footer-input" name="email" placeholder=" " />
-              <span class="foot-form-label">E-mail</span>
-              
-            </label>
-            </form>
+              <form class="footer-form" autocomplete="off">
+                <label class="footer-field">
+                  <input
+                    type="email"
+                    class="footer-input"
+                    name="email"
+                    placeholder=" "
+                  />
+                  <span class="foot-form-label">E-mail</span>
+                </label>
+              </form>
 
-            <button class="button-blue footer">
-              <span class="button-name">Подписаться</span>
-              <svg class="button-icon" width="24" height="24">
-                <use
-                  href="./icons/symbol-defs.svg#icon-send"
-                  class="icon-send"
-                ></use>
-              </svg>
-            </button>
+              <button class="button-blue footer">
+                <span class="button-name">Подписаться</span>
+                <svg class="button-icon" width="24" height="24">
+                  <use
+                    href="./icons/symbol-defs.svg#icon-send"
+                    class="icon-send"
+                  ></use>
+                </svg>
+              </button>
             </div>
           </section>
         </div>
@@ -513,92 +517,109 @@
 
     <!-- MODAL WINDOW -->
     <div class="backdrop is-hidden" data-backdrop>
-    <div class="modal">
-    <div class="modal-box">
-    <h1 class="modal-title">Оставьте свои данные, мы вам перезвоним</h1>
-    <form class="form" autocomplete="off">
-      <label class="form-field">
-        <input type="text" class="form-input" name="name" placeholder=" " />
-        <span class="form-label">Имя</span>
-        <svg class="icon" width="16" height="11">
-          <use href="./icons/symbol-defs.svg#icon-person"></use>
-        </svg>
-      </label>
+      <div class="modal">
+        <div class="modal-box">
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <form class="form" autocomplete="off">
+            <label class="form-field">
+              <input
+                type="text"
+                class="form-input"
+                name="name"
+                placeholder=" "
+              />
+              <span class="form-label">Имя</span>
+              <svg class="icon" width="16" height="11">
+                <use href="./icons/symbol-defs.svg#icon-person"></use>
+              </svg>
+            </label>
 
-      <label class="form-field">
-        <input type="tel" class="form-input" name="telephone" placeholder=" " />
-        <span class="form-label">Телефон</span>
-        <svg class="icon" width="16" height="11">
-          <use href="./icons/symbol-defs.svg#icon-phone"></use>
-        </svg>
-      </label>
+            <label class="form-field">
+              <input
+                type="tel"
+                class="form-input"
+                name="telephone"
+                placeholder=" "
+              />
+              <span class="form-label">Телефон</span>
+              <svg class="icon" width="16" height="11">
+                <use href="./icons/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </label>
 
-      <label class="form-field">
-        <input type="email" class="form-input" name="email" placeholder=" " />
-        <span class="form-label">Почта</span>
-        <svg class="icon" width="16" height="11">
-          <use href="./icons/symbol-defs.svg#icon-email"></use>
-        </svg>
-      </label>
+            <label class="form-field">
+              <input
+                type="email"
+                class="form-input"
+                name="email"
+                placeholder=" "
+              />
+              <span class="form-label">Почта</span>
+              <svg class="icon" width="16" height="11">
+                <use href="./icons/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </label>
 
-      <!-- TEXTAREA -->
-      <label class="form-textarea">
-        <textarea
-          class="form-comment"
-          name="comment"
-          rows="10"
-          placeholder=" "
-        ></textarea>
-        <span class="form-label-comment">Комментарий</span>
-      </label>
+            <!-- TEXTAREA -->
+            <label class="form-textarea">
+              <textarea
+                class="form-comment"
+                name="comment"
+                rows="10"
+                placeholder=" "
+              ></textarea>
+              <span class="form-label-comment">Комментарий</span>
+            </label>
 
-      <!-- CHECKBOX -->
+            <!-- CHECKBOX -->
 
-      <label class="form-check">
-        <input class="checkbox" type="checkbox" name="topic" value="agree" />
-        <span class="check-icon"></span>
-        <span class="checkbox-label">
-          Соглашаюсь с рассылкой и принимаю
-          <a href="" class="checkbox-link"> Условия договора</a>
-        </span>
-      </label>
-    </form>
+            <label class="form-check">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="topic"
+                value="agree"
+              />
+              <span class="check-icon"></span>
+              <span class="checkbox-label">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="" class="checkbox-link"> Условия договора</a>
+              </span>
+            </label>
+          </form>
 
-    <button class="button-blue modalbutton">Отправить</button>
+          <button class="button-blue modalbutton">Отправить</button>
 
-    <!-- X-CLOSE BUTTON -->
-    <button class="x-close" data-close-modal>
-      <svg class="icon-x" width="15" height="27">
-         <use href="./icons/symbol-defs.svg#icon-x"></use>
-      </svg>
-    </button>
-</div>
-</div>
-</div>
+          <!-- X-CLOSE BUTTON -->
+          <button class="x-close" data-close-modal>
+            <svg class="icon-x" width="15" height="27">
+              <use href="./icons/symbol-defs.svg#icon-x"></use>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
 
+    <!-- click script -->
+    <script>
+      const refs = {
+        openModalBtn: document.querySelector('[data-open-modal]'),
+        closeModalBtn: document.querySelector('[data-close-modal]'),
+        backdrop: document.querySelector('[data-backdrop]'),
+      };
 
-<!-- click script -->
-<script>
-  const refs = {
-    openModalBtn: document.querySelector('[data-open-modal]'),
-    closeModalBtn: document.querySelector('[data-close-modal]'),
-    backdrop: document.querySelector('[data-backdrop]'),
-  };
+      refs.openModalBtn.addEventListener('click', toggleModal);
+      refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  refs.openModalBtn.addEventListener('click', toggleModal);
-  refs.closeModalBtn.addEventListener('click', toggleModal);
+      refs.backdrop.addEventListener('click', logBackdropClick);
 
-  refs.backdrop.addEventListener('click', logBackdropClick);
+      function toggleModal() {
+        refs.backdrop.classList.toggle('is-hidden');
+      }
 
-  function toggleModal() {
-    refs.backdrop.classList.toggle('is-hidden');
-  }
-
-  function logBackdropClick() {
-    console.log('Это клик в бекдроп');
-  }
-</script>
-
-    </body>
+      function logBackdropClick() {
+        console.log('Это клик в бекдроп');
+      }
+    </script>
   </body>
 </html>
